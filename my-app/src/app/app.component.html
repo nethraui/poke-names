@@ -1,0 +1,39 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div style="background-color: rgba(134, 131, 131, 0.267)">
+  <div class="header-name">
+    <h1 >{{title}}</h1>
+    <div class="next-prev-button">  
+    <button class="previous" (click) = "clickPrevious()">Previous</button>
+    <button class="previous" (click) = "clickNext()">Next</button>
+    </div>
+  </div>
+  
+  <div class="container" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start">
+    <ng-container *ngFor="let com of lstcomments">
+      <app-card fxFlex="0 1 calc(25% - 32px)" class="pokecard">
+        <h4>{{com.name}}</h4>
+        <img src="{{com.imageUrl}}">
+      </app-card>
+    </ng-container>
+  </div>
+</div>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+
+
+<router-outlet></router-outlet>
